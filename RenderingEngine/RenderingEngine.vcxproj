@@ -139,7 +139,18 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="filefunctions.cpp" />
+    <ClCompile Include="objects.cpp" />
+    <ClCompile Include="renderfunctions.cpp" />
     <ClCompile Include="RenderingEngine.cpp" />
+    <ClCompile Include="vectorfunctions.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="filefunctions.h" />
+    <ClInclude Include="Header.h" />
+    <ClInclude Include="objects.h" />
+    <ClInclude Include="renderfunctions.h" />
+    <ClInclude Include="vectorfunctions.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -1,20 +1,25 @@
-// RenderingEngine.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
+// RenderingEngine.cpp
 
-#include <iostream>
+#include "header.h"
+#include "filefunctions.h"
+#include "renderfunctions.h"
+#include "objects.h"
+#include "vectorfunctions.h"
 
-int main()
-{
-    std::cout << "Hello World!\n";
+int test() {
+	camera cam;
+	cam.pos = std::vector<float>{-1,0,0};
+	cam.w = 512; cam.h = 512;
+	cam.sensor.pos = std::vector<float>{0,1,-1};
+	cam.sensor.w = 2; cam.sensor.h = 2;
+	sphere s; 
+	s.pos = std::vector<float>{2,0,0};
+	s.radius = 1;
+	render(cam, s);
+	return writePPM(cam.imgBuffer, cam.w, cam.h, "test1.ppm");;
 }
 
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
 
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
+int main() {
+	return test();
+}
