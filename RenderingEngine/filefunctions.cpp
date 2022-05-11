@@ -20,9 +20,9 @@ int writePPM(unsigned char* img, int w, int h, std::string str) {
 
 std::string generateFN(int frame, std::string outPath, std::string outPre, std::string outExt) {
     std::string str = std::to_string(frame) + outExt;
-    for (int i = 0; i < 7 - str.length(); i++) {
-        str = "0" + str;
-    }
+    //for (int i = 0; i < 7 - str.length(); i++) {
+        //str = "0" + str;
+    //}
     str = outPath + outPre + str;
     return str;
 }

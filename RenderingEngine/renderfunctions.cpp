@@ -22,8 +22,8 @@ int render(camera c, sphere s) {
 					diffrence(
 						std::vector<float>{
 										0,
-										c.sensor.pos[2] + (c.sensor.h / c.h) * y,
-										c.sensor.pos[3] + (c.sensor.w / c.w) * x
+										c.sensor.pos[1] + (c.sensor.h / c.h) * y,
+										c.sensor.pos[2] + (c.sensor.w / c.w) * x
 							},
 						c.pos
 					)

@@ -140,7 +140,6 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="filefunctions.cpp" />
-    <ClCompile Include="objects.cpp" />
     <ClCompile Include="renderfunctions.cpp" />
     <ClCompile Include="RenderingEngine.cpp" />
     <ClCompile Include="vectorfunctions.cpp" />

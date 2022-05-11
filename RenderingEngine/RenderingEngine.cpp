@@ -12,11 +12,12 @@ int test() {
 	cam.w = 512; cam.h = 512;
 	cam.sensor.pos = std::vector<float>{0,1,-1};
 	cam.sensor.w = 2; cam.sensor.h = 2;
+	cam.imgBuffer = new unsigned char{ 0 };
 	sphere s; 
 	s.pos = std::vector<float>{2,0,0};
 	s.radius = 1;
 	render(cam, s);
-	return writePPM(cam.imgBuffer, cam.w, cam.h, "test1.ppm");;
+	return writePPM(cam.imgBuffer, cam.w, cam.h, "./Output/out.ppm");
 }
 
 
